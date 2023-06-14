@@ -1,0 +1,35 @@
+.resume-builder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60vw;
+  height: 100vh; /* Set the height of the container to the full viewport height */
+}
+
+  .resume-builder > * {
+    width: 100%;
+  }
+  
+  .resume-builder .save-and-next-button {
+    width: 25vw; /* Set save button to 25% of viewport width */
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    margin-top: 40px;
+    font-size: 25px;
+  }
+
+  .heading {
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .sections-container {
+    width: 100%;
+  }
+  
+ 

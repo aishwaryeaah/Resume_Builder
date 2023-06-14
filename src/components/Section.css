@@ -1,0 +1,132 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.section {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  padding: 10px;
+  background-color: #fff;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+.section + .section {
+  margin-top: 20px;
+  position: relative;
+}
+
+.section + .section:before,
+.section:last-child:after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.section.active {
+  background-color: #fff;
+}
+
+.section.dragging {
+  background-color: #f8f8f8;
+  border-color: #888;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  transform: scale(1.02);
+}
+
+.section .drag-button,
+.section .edit-button,
+.section .toggle-button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #343434;
+  transition: color 0.3s ease;
+}
+
+.section .drag-button {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.section .section-name {
+  flex-grow: 1;
+  margin-left: 20px;
+  font-size: 23px;
+}
+
+.section input {
+  font-family: "Roboto", sans-serif;
+  font-size: 23px;
+  color: #333;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-left: 20px;
+}
+
+.section .edit-button {
+  margin-right: 15px;
+  font-size: 18px;
+  position: absolute;
+  right: 80px;
+}
+
+.section .edit-button:hover {
+  color: #333;
+}
+
+.section:not(.active).editing,
+.section.inactive:not(.editing) {
+  background-color: #ccc;
+}
+
+.section .toggle-button {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 28px;
+  color: #381e72;
+  position: absolute;
+  right: 20px;
+}
+
+.section .toggle-button.off {
+  color: #888;
+  position: absolute;
+  right: 20px;
+}
+
+.section.dragging {
+  background-color: #ccc;
+  cursor: grab;
+  transform: scale(1.02);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.section.dragging:active {
+  cursor: grabbing;
+}
+
+.section.dragging .drag-button,
+.section.dragging .edit-button,
+.section.dragging .toggle-button {
+  pointer-events: none;
+}
+
+.section.editing {
+  background-color: #fff;
+}
+
+.section.inactive {
+  background-color: #ccc;
+}

@@ -1,0 +1,23 @@
+.save-and-next-button {
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #641b6d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 50px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Add transition for smooth effect */
+}
+
+.save-and-next-button:hover {
+  background-color: #26092a; /* Change background color on hover */
+  transform: scale(1.1); /* Apply scaling effect on hover */
+  box-shadow: 0 0 10px #3a0a41; /* Add box shadow on hover */
+}
+
+.save-and-next-button:disabled {
+  opacity: 0.9;
+  cursor: not-allowed;
+}
